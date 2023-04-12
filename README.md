@@ -25,4 +25,5 @@ This project is about extracting data from Twitter API, using Python scripts, de
 
 
 # Cleaned data ready to use for further analysis.
-![clean_data](https://user-images.githubusercontent.com/7123198/230835824-243069f6-7333-44be-80b6-ed898b3e8515.png)
+
+![cleaned_tweet_Tech_Impact](https://user-images.githubusercontent.com/7123198/231534976-fdcda727-5be6-446a-a118-a895d3a20261.png)
