@@ -27,21 +27,17 @@ def run_twitter_etl():
     # for tweet in tweets:
     #     print(tweet.text)
         
-    list = []
+    tweets_list = []
     for tweet in tweets:
-        if hasattr(tweet, 'full_text'):
-            text = tweet.full_text
-        elif hasattr(tweet, 'extended_tweet') and 'full_text' in tweet.extended_tweet:
-            text = tweet.extended_tweet['full_text']
-        else:
-            text = tweet.text
+        text = tweet._json["full_text"]
 
         refined_tweet = {"user": tweet.user.screen_name,
                         'text' : text,
                         'favorite_count' : tweet.favorite_count,
                         'retweet_count' : tweet.retweet_count,
                         'created_at' : tweet.created_at}
-        list.append(refined_tweet)
+        
+        tweets_list.append(refined_tweet)
 
-    df = pd.DataFrame(list)
-    df.to_csv('s3://myetlbucket-rkg/refined_tweets.csv')
+    df = pd.DataFrame(tweets_list)
+    df.to_csv('s3://myetlbucket-rkg/Tech_Impact_tweets.csv')
