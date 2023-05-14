@@ -12,9 +12,9 @@ This project is about extracting data from Twitter API, using Python scripts, de
 
 ![Twitter_ETL](https://user-images.githubusercontent.com/7123198/230835468-2ff72e44-86f6-4a45-9741-a86849111982.png)
 
-- TWitter APi is used to collect data from specific twitter account with help of Python script.
-- Collected unstructured data from Twitter API is saved to locally.
-- Apache Airflow and required dependencys are downloded in AWS EC2.
+- Used Twitter API to collect data from specific Twitter account with help of Python script.
+- Collected unstructured data from Twitter API is saved locally.
+- Apache Airflow and required dependencies are downloded in AWS EC2.
 - ETL job is created in Airflow with python script and data is loaded to S3 bucket.
 - Used Tableau for visualization. 
 
